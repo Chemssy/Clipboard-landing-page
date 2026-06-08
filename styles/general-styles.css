@@ -1,0 +1,51 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-gray-50 : #f5f7f7;
+    --color-gray-500: #9eabb2;
+    --color-gray-700: #4c545c;
+    --color-gray-950: #2a2a2a;
+
+    --color-green-300: #5dccbb;
+    --color-green-500: #26bba4;
+
+    --color-blue-400: #8897ff;
+    --color-blue-500: #6174ff;
+
+    --font-primary: "Bai Jamjuree", sans-serif;
+
+    --bai-jamjuree-regular: 400;
+    --bai-jamjuree-semibold: 700;
+}
+
+body{
+    font-family: var(--font-primary);
+}
+
+a, img{
+    display: block;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+}
