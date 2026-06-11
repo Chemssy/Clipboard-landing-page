@@ -165,12 +165,24 @@
             max-width: none;
         }
         
+        & .description_container{
+            max-width: 730px;
+            margin: auto;
+        }
+
         & .image_group_1{
             flex-direction: row;
         }
 
         & .image_group_1 .image_computer {
             max-width: clamp(400px,55vw,750px);
+        }
+
+        & .image_group_1 .features_container {
+            text-align: start;
+            margin: 0;
+            margin-right: auto;
+            justify-content: center;
         }
     }
 }
@@ -246,6 +258,12 @@
             max-width: none;
         }
     }
+
+    @media screen and (min-width:1024px) {
+        & {
+            max-width: 808px;
+        }
+    }
 }
 
 /* <--------------  Section 4  --------------> */
@@ -286,6 +304,17 @@
             margin: auto;
         }
     }
+
+    @media screen and (min-width:1024px) {
+        & {
+            max-width: clamp(616px,70vw,1114px);
+            padding: 0px;
+        }
+        
+        & .features_container{
+            flex-direction: row;
+        }
+    }
 }
 
 .feature_2 {
@@ -323,10 +352,21 @@
         }
 
         & .group_2 {
-            width: 318px;
+            max-width: 318px;
             margin: auto;
         }
     }
+
+    @media screen and (min-width:1024px) {
+        & {
+            flex-direction: row;
+            max-width: 1000px;
+        }
+        & .logo_group{
+            width:auto;
+        }
+    }
+
 }
 
 .logo_group {
@@ -355,6 +395,12 @@
             margin: auto;
         }
     }
+
+    @media screen and (min-width: 1024px) {
+        & {
+            max-width: 730px;
+        }
+    }
 }
 
 /* <--------------  Footer  --------------> */
@@ -365,16 +411,40 @@
 }
 
 .footer_content {
-    width: 160px;
+    max-width: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
     margin: auto;
+
+    @media screen and (min-width:1024px) {
+        & {
+            width: 90%;
+            max-width: 1050px;
+            flex-direction: row;
+            gap: 60px;
+        }
+
+        & .links_group {
+            flex-direction: row;
+            width: 40%;
+            flex-wrap: wrap;
+            column-gap: 40px;
+            row-gap: 10px;
+        }
+
+        & .social_media_icons {
+            width: 12%;
+            margin-left: auto;
+        }
+    }
+
 }
 
 .footer_logo {
-    width: 56px;
+    width: 100%;
+    max-width: 56px;
     height: 56px;
 }
 
