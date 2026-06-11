@@ -1,13 +1,12 @@
 .header {
     position: relative;
-    margin-bottom: 158px;
+    margin-bottom: 150px;
 }
 
-.bg_header{
+.bg_header {
     position: absolute;
     width: 100%;
 }
-
 
 .section_1 {
     display: flex;
@@ -24,6 +23,14 @@
             gap: 56px;
         }
     }
+
+    @media screen and (min-width:1024px) {
+        &{
+            width: 730px;
+            padding-inline: 0;
+        }
+    }
+
 }
 
 .content_container {
@@ -67,19 +74,27 @@
     flex-direction: column;
     gap: 24px;
 
-    @media screen and (min-width:768px) {
+    @media screen and (min-width: 768px) {
         & {
             flex-direction: row;
             justify-content: center;
 
-            & .download_button{
+            & .download_button {
                 padding: 13px 28px;
             }
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        &{
+            width: 75%;
+            margin: auto;
         }
     }
 }
 
 .download_button {
+    width: 100%;
     font-family: var(--font-primary);
     font-weight: var(--bai-jamjuree-semibold);
     border-radius: 28px;
@@ -92,6 +107,17 @@
     color: var(--color-white);
     box-shadow: 0px 15px 10px -8px var(--color-gray-950);
     cursor: pointer;
+
+    transform: scale(1);
+    opacity: 100%;
+    transition: transform  0.3s ease-in-out,
+                opacity 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+        opacity: 80%;
+    }
+
 }
 
 .download_button-ios {
@@ -110,6 +136,43 @@
     gap: 72px;
     padding: 0px 32px;
     margin-bottom: 177px;
+
+    @media screen and (min-width: 768px) {
+        & {
+            max-width: 616px;
+            padding: 0;
+            gap: 96px;
+            margin: 0 auto 157px auto;
+        }
+
+        & .image_group_1 {
+            gap: 96px;
+        }
+
+        & .image_group_1 .image_computer {
+            max-width: none;
+        }
+
+        & .features_container {
+            max-width: 350px;
+            margin: auto;
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        
+        & {
+            max-width: none;
+        }
+        
+        & .image_group_1{
+            flex-direction: row;
+        }
+
+        & .image_group_1 .image_computer {
+            max-width: clamp(400px,55vw,750px);
+        }
+    }
 }
 
 .subtitle {
@@ -129,7 +192,7 @@
 .features_container {
     display: flex;
     flex-direction: column;
-    gap: 56px;
+    gap: clamp(56px, 8.5vw, 64px);
     text-align: center;
 }
 
@@ -168,6 +231,21 @@
     & .image_devices {
         max-width: 400px;
     }
+
+    @media screen and (min-width: 768px) {
+        & {
+            max-width: 616px;
+            margin: 0 auto 100px auto;
+        }
+
+        & .description {
+            margin-bottom: 80px;
+        }
+
+        & .image_devices {
+            max-width: none;
+        }
+    }
 }
 
 /* <--------------  Section 4  --------------> */
@@ -188,6 +266,26 @@
     & .features_container {
         gap: 64px;
     }
+
+    @media screen and (min-width: 768px) {
+        & {
+            max-width: 616px;
+            margin: 0 auto 155px auto;
+        }
+
+        & .description {
+            margin-bottom: 72px;
+        }
+
+        & .features_container {
+            gap: 48px;
+        }
+
+        & .features_container .feature_2 {
+            max-width: 388px;
+            margin: auto;
+        }
+    }
 }
 
 .feature_2 {
@@ -206,18 +304,36 @@
 /* <--------------  Logo container  --------------> */
 
 .logo_container {
-    width: 140px;
+    width: 100%;
+    max-width: 140px;
     display: flex;
     flex-direction: column;
     gap: 56px;
     margin: auto;
     margin-bottom: 172px;
+
+    @media screen and (min-width: 768px) {
+        & {
+            max-width: 590px;
+            margin-bottom: 154px;
+        }
+
+        & .logo_group {
+            flex-direction: row;
+        }
+
+        & .group_2 {
+            width: 318px;
+            margin: auto;
+        }
+    }
 }
 
 .logo_group {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 56px;
 }
 
@@ -226,6 +342,19 @@
 .section_5 {
     padding: 0px 32px;
     margin-bottom: 168px;
+
+    @media screen and (min-width: 768px) {
+        & {
+            max-width: 616px;
+            padding: 0px;
+            margin: 0 auto 153px auto;
+        }
+
+        & .download_button_container {
+            width: 85%;
+            margin: auto;
+        }
+    }
 }
 
 /* <--------------  Footer  --------------> */
