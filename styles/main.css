@@ -1,21 +1,41 @@
+.header {
+    position: relative;
+    margin-bottom: 158px;
+}
+
+.bg_header{
+    position: absolute;
+    width: 100%;
+}
+
+
 .section_1 {
     display: flex;
     flex-direction: column;
     gap: 64px;
     align-items: center;
 
-    background-image: url(../assets/images/bg-header-mobile.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    padding: 123px 28px 0px 28px;
-    margin-bottom: 158px;
+    padding: clamp(123px, 20vw, 131px) 28px 0px 28px;
+
+    @media screen and (min-width: 768px) {
+        & {
+            margin: auto;
+            width: 616px;
+            gap: 56px;
+        }
+    }
 }
 
 .content_container {
     display: flex;
     flex-direction: column;
     gap: 56px;
+
+    @media screen and (min-width: 768px) {
+        & {
+            gap: 48px;
+        }
+    }
 }
 
 .description_container {
@@ -26,11 +46,12 @@
 }
 
 .title {
-    font-size: clamp(32px, 7.25vw, 46px);
+    font-size: clamp(32px, 4.8vw, 46px);
     font-weight: var(--bai-jamjuree-semibold);
     color: var(--color-gray-700);
     line-height: 125%;
     letter-spacing: -0.5px;
+    text-wrap: balance;
 }
 
 .description {
@@ -45,6 +66,17 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    @media screen and (min-width:768px) {
+        & {
+            flex-direction: row;
+            justify-content: center;
+
+            & .download_button{
+                padding: 13px 28px;
+            }
+        }
+    }
 }
 
 .download_button {
@@ -90,6 +122,10 @@
     gap: 72px;
 }
 
+.image_computer {
+    max-width: 400px;
+}
+
 .features_container {
     display: flex;
     flex-direction: column;
@@ -128,6 +164,10 @@
     & .description {
         margin-bottom: 72px;
     }
+
+    & .image_devices {
+        max-width: 400px;
+    }
 }
 
 /* <--------------  Section 4  --------------> */
@@ -153,12 +193,12 @@
 .feature_2 {
     align-items: center;
 
-    & .feature_title{
+    & .feature_title {
         margin-top: 40px;
         margin-bottom: 16px;
     }
 
-    & .feature_description{
+    & .feature_description {
         margin-bottom: 0px;
     }
 }
@@ -174,7 +214,7 @@
     margin-bottom: 172px;
 }
 
-.logo_group{
+.logo_group {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -209,9 +249,23 @@
     height: 56px;
 }
 
+.links_group {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+}
+
+.links_group li a {
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.15px;
+    color: var(--color-gray-700);
+}
+
 .social_media_icons {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
