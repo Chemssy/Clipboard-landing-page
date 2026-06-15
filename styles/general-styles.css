@@ -44,7 +44,27 @@ a{
     text-decoration: none;
 }
 
+svg{
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
 img{
     width: 100%;
     height: auto;
+}
+
+@media (prefers-reduced-motion: reduce){
+    .download_button{
+        transition: none;
+    }
+
+    .link_footer::before{
+        transition: all 0.8s ease-in-out;
+    }
+
+    .footer_icon {
+        transition: none;
+    }
 }
