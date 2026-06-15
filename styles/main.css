@@ -452,7 +452,7 @@
 }
 
 @media screen and (min-width: 64em) {
-    .link_footer {
+    .footer_link {
         position: relative;
         z-index: 10;
         &::before {
